@@ -1,0 +1,12 @@
+; Rule 1: If the initial telomere length is less than 10 and the mutation probability is greater than 0.5
+(defrule suggest-drug-a
+    (parameter num_cells >= 27)
+    =>
+    (assert suggested-drug "DrugA" 100)
+)
+
+; Default rule: If none of the above conditions are met
+(defrule default-rule
+    =>
+    (assert suggested-drug "DefaultDrug" 50)
+)
